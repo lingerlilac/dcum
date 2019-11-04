@@ -48,3 +48,11 @@ bytes\_3 / bytes\_5 |  Bytes received in the third / fifth queue.
 inactive\_time|  Inactive time of AP.    
 expected\_throughput |  Expected throughput.  
 sta\_count |  Amount of associated clients.  
+
+
+*Custom messages and actions*
+We implement the monitoring messages carry real-time sampled data to collectors and the controller; we extend the monitoring message in 5G-empower to do these works. We also implement a control message to transmit the generated decision trees to the APs and feedback the transmission results. The overheads of these messages are described in \textsection \ref{sec:trigger}. We also implement custom actions to process the control messages and maintain trees (create, insert, delete, update, search.).
+
+*Logic plane part*
+
+The logic plane is the ``brain'' of our platform. As shown in Fig. \ref{fig:framework}: association control, overload diagnosing, related factors exploration, real-time data receiving, and data preprocessing are working on it. We will introduce these functional modules in the following paragraphs.
