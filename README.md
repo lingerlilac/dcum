@@ -17,11 +17,7 @@ We focus on TCP traffic in this paper. For TCP, windows play an important role i
 Module  | Location | Rate
 ----------|-----------|----------
 Link  | Mac80211, kernel | 250 Hz 
-
 Channel | Mac80211, kernel | 250 Hz
-
 Queue | sch\_ generic.c, kernel | 250 Hz 
-
 Beacon | Mac80211, kernel | 10 Hz 
-
 Drops | Mac80211, codel.h, kernel | Each drop
