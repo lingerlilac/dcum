@@ -56,3 +56,6 @@ We implement the monitoring messages carry real-time sampled data to collectors 
 *Logic plane part*
 
 The logic plane is the ``brain'' of our platform. As shown in Fig. \ref{fig:framework}: association control, overload diagnosing, related factors exploration, real-time data receiving, and data preprocessing are working on it. We will introduce these functional modules in the following paragraphs.
+
+*Data receiving and processing*
+Typical SDWN will produce large amounts of data samples that should be processed and transmitted in real-time to other functions. It is challenging to guarantee time performance when the scale of the WLAN is big enough to cause abundant computational loads. There are several kinds of computations. For example, maintaining data to compute link statistics, packet statistics, channel statistics, packet statistics; merging these statistics to be useful data items, and preprocessing these data items. To guarantee time performance, we code all the data receiving modules with the C language, and apply numerous optimization methods in these modules.
