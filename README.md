@@ -13,7 +13,7 @@ We utilize the OpenFlow \cite{McKeown2008} protocol to convert commercial APs in
 
 *Rate control*
 We focus on TCP traffic in this paper. For TCP, windows play an important role in rate control. There are three kinds of windows for TCP (except BBR \cite{Cardwell2016}): the congestion window (CWND), the send window, and receive window (advertised window in packets). The send window controls the data rate; it must be smaller than the congestion window and the receive window. Receive window can be modified on APs. So, if we can get the congestion window, we can modify the receive window to be a lower value which smaller than the congestion window to limit the data rate (send window must smaller than this modified value). Fortunately, authors of research work in \cite{Hagos2018} propose a machine learning method that can infer the congestion window on APs. We use this method in this paper to control data rates.
-
+Categories, sources and sample rates of sampled information
 Module  | Location | Rate
 ----------|-----------|----------
 Link  | Mac80211, kernel | 250 Hz 
